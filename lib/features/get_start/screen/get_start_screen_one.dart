@@ -30,7 +30,7 @@ class GetStartScreenOne extends StatelessWidget {
             left: 0,
             right: 0,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -57,16 +57,22 @@ class GetStartScreenOne extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 72.h),
-                  Center(
-                    child: CustomElevated(
-                      text: 'Get Started',
-                      press: () {
-                        context.push(Routes.getStartTwoScreen.path);
-                      },
-                      btnColor: AppColors.current.witheColor,
-                      textColor: AppColors.current.primaryTextColor,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                    child: Center(
+                      child: CustomElevated(
+                        text: 'Get Started',
+                        press: () {
+                          context.push(Routes.getStartTwoScreen.path);
+                        },
+                        btnColor: AppColors.current.witheColor,
+                        textColor: AppColors.current.primaryTextColor,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w500,
+                        borderRadius: 90,
+                        wSize: 315,
+                        hSize: 45,
+                      ),
                     ),
                   ),
                 ],

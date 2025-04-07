@@ -10,6 +10,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: Cormorant
+  static const String cormorant = 'Cormorant';
+
   /// Font family: Montserrat
   static const String montserrat = 'Montserrat';
 }

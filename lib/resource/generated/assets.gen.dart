@@ -24,8 +24,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/doos_logo.png
   AssetGenImage get doosLogo => const AssetGenImage('assets/images/doos_logo.png');
 
+  /// File path: assets/images/facebook-logo.png
+  AssetGenImage get facebookLogo => const AssetGenImage('assets/images/facebook-logo.png');
+
   /// File path: assets/images/get_start.png
   AssetGenImage get getStart => const AssetGenImage('assets/images/get_start.png');
+
+  /// File path: assets/images/google-logo.png
+  AssetGenImage get googleLogo => const AssetGenImage('assets/images/google-logo.png');
 
   /// File path: assets/images/star.png
   AssetGenImage get starPng => const AssetGenImage('assets/images/star.png');
@@ -34,7 +40,7 @@ class $AssetsImagesGen {
   SvgGenImage get starSvg => const SvgGenImage('assets/images/star.svg');
 
   /// List of all assets
-  List<dynamic> get values => [checkedPng, checkedSvg, doosLogo, getStart, starPng, starSvg];
+  List<dynamic> get values => [checkedPng, checkedSvg, doosLogo, facebookLogo, getStart, googleLogo, starPng, starSvg];
 }
 
 class Assets {

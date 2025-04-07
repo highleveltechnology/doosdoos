@@ -26,6 +26,9 @@ class AppColors {
     required this.newOrderColor,
     required this.underWorkingColor,
     required this.recipientOrdersColors,
+    required this.dialogTextColor,
+    required this.ayeColor,
+    required this.signUpButtonColor,
   });
 
   static late AppColors current;
@@ -56,11 +59,17 @@ class AppColors {
   final Color newOrderColor;
   final Color underWorkingColor;
   final Color recipientOrdersColors;
+  final Color dialogTextColor;
+  final Color ayeColor;
+  final Color signUpButtonColor;
 
   /// gradient
   final LinearGradient primaryGradient;
 
   static const firstAppColor = AppColors(
+    signUpButtonColor: Color(0xffF2F2F2),
+    ayeColor: Color(0xff00875A),
+    dialogTextColor: Color(0xffB9B9B9),
     underWorkingColor: Color(0xff3ACCDE),
     recipientOrdersColors: Color(0xffC218DF),
     newOrderColor: Color(0xff456DFF),
@@ -89,6 +98,9 @@ class AppColors {
   );
 
   static const secondAppColor = AppColors(
+    signUpButtonColor: Color(0xffF2F2F2),
+    ayeColor: Color(0xff00875A),
+    dialogTextColor: Color(0xffB9B9B9),
     recipientOrdersColors: Color(0xffC218DF),
     underWorkingColor: Color(0xff3ACCDE),
     newOrderColor: Color(0xff456DFF),
@@ -118,6 +130,9 @@ class AppColors {
   );
 
   static const darkThemeColor = AppColors(
+    signUpButtonColor: Color(0xffF2F2F2),
+    ayeColor: Color(0xff00875A),
+    dialogTextColor: Color(0xffB9B9B9),
     recipientOrdersColors: Color(0xffC218DF),
     underWorkingColor: Color(0xff3ACCDE),
     newOrderColor: Color(0xff456DFF),
@@ -167,6 +182,9 @@ class AppColors {
     Color? onBoardingText,
   }) {
     return AppColors(
+      signUpButtonColor: signUpButtonColor,
+      ayeColor: ayeColor,
+      dialogTextColor: Color(0xffB9B9B9),
       recipientOrdersColors: recipientOrdersColors,
       underWorkingColor: underWorkingColor,
       newOrderColor: newOrderColor,

@@ -2,10 +2,12 @@ import 'package:doos/features/get_start/models/get_start.dart';
 import 'package:doos/features/get_start/widgets/row_item.dart';
 import 'package:doos/resource/generated/fonts.gen.dart';
 import 'package:doos/resource/styles/app_colors.dart';
+import 'package:doos/src/core/navigation/routes/routes_enum.dart';
 import 'package:doos/src/core/widget/custom_elevated.dart';
 import 'package:doos/src/core/widget/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class GetStartScreenTwo extends StatelessWidget {
   GetStartScreenTwo({super.key});
@@ -95,7 +97,7 @@ class GetStartScreenTwo extends StatelessWidget {
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: CustomText(
-                  text: 'Why Choose Doos Doos ?',
+                  text: 'Why Choose Doos Doos?',
                   textStyle: TextStyle(
                     color: AppColors.current.primaryTextColor,
                     fontSize: 28.sp,
@@ -120,11 +122,16 @@ class GetStartScreenTwo extends StatelessWidget {
               Center(
                 child: CustomElevated(
                   text: 'Get Started',
-                  press: () { },
+                  press: () { 
+                    context.push(Routes.signUpScreen.path);
+                  },
                   btnColor: AppColors.current.primaryTextColor,
                   textColor: AppColors.current.witheColor,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
+                  wSize: 315,
+                  hSize: 45,
+                  borderRadius: 90,
                 ),
               ),
             ],
