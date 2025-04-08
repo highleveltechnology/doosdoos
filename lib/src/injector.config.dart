@@ -10,6 +10,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:dio/dio.dart' as _i361;
+import 'package:doos/features/main_nav/persentation/cubit/main_nav_cubit.dart'
+    as _i287;
 import 'package:doos/src/app/bloc/app_bloc.dart' as _i959;
 import 'package:doos/src/core/firebase_notification/firebase_notification.dart'
     as _i138;
@@ -31,6 +33,7 @@ extension GetItInjectableX on _i174.GetIt {
   }) async {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final appModule = _$AppModule();
+    gh.factory<_i287.MainNavCubit>(() => _i287.MainNavCubit());
     gh.factory<_i138.FirebaseNotificationUserClass>(
       () => _i138.FirebaseNotificationUserClass(),
     );

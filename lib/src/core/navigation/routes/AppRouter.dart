@@ -6,9 +6,14 @@ import 'package:doos/features/auth/persentation/sign_in/screen/sign_in_screen.da
 import 'package:doos/features/auth/persentation/sign_up/screens/sign_up_screen.dart';
 import 'package:doos/features/get_start/screen/get_start_screen_one.dart';
 import 'package:doos/features/get_start/screen/get_start_screen_two.dart';
+import 'package:doos/features/home/persentation/screen/home_screen.dart';
+import 'package:doos/features/main_nav/persentation/cubit/main_nav_cubit.dart';
+import 'package:doos/features/main_nav/persentation/screen/main_nav_screen.dart';
 import 'package:doos/features/splash/screen/splash_screen.dart';
 import 'package:doos/src/core/navigation/routes/routes_enum.dart';
+import 'package:doos/src/injector.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRoutes {
@@ -34,7 +39,7 @@ class AppRoutes {
           return const GetStartScreenOne();
         },
       ),
-      
+
       GoRoute(
         path: Routes.getStartTwoScreen.path,
         name: Routes.getStartTwoScreen.name,
@@ -42,35 +47,58 @@ class AppRoutes {
           return GetStartScreenTwo();
         },
       ),
-      GoRoute(path: Routes.signUpScreen.path,
+      GoRoute(
+        path: Routes.signUpScreen.path,
         name: Routes.signUpScreen.name,
         builder: (context, state) {
           return const SignUpScreen();
         },
       ),
-     GoRoute(path: Routes.signInScreen.path,
+      GoRoute(
+        path: Routes.signInScreen.path,
         name: Routes.signInScreen.name,
         builder: (context, state) {
           return const SignInScreen();
         },
       ),
-           GoRoute(path: Routes.forgetPassword.path,
+      GoRoute(
+        path: Routes.forgetPassword.path,
         name: Routes.forgetPassword.name,
         builder: (context, state) {
           return const ForgetPassword();
         },
       ),
-        GoRoute(path: Routes.OtpScreen.path,
+      GoRoute(
+        path: Routes.OtpScreen.path,
         name: Routes.OtpScreen.name,
         builder: (context, state) {
           return const OtpScreen();
         },
       ),
-              GoRoute(path: Routes.createNewPassword.path,
+      GoRoute(
+        path: Routes.createNewPassword.path,
         name: Routes.createNewPassword.name,
         builder: (context, state) {
           return const CreateNewPassword();
         },
+      ),
+      ShellRoute(
+        builder: (context, state, child) {
+          return BlocProvider(
+            create: (context) => getIt<MainNavCubit>(),
+            child: MainNavScreen(child: child),
+          );
+        },
+        navigatorKey: _shellNavigatorKey,
+        routes: [
+          GoRoute(
+            path: Routes.homeScreen.path,
+            name: Routes.homeScreen.name,
+            builder: (context, state) {
+              return const HomeScreen();
+            },
+          ),
+        ],
       ),
     ],
   );

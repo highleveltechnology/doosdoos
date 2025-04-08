@@ -50,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                                                fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w400,
                         fontFamily: FontFamily.montserrat,
                       ),
                     ),
@@ -69,7 +69,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                                               fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w400,
                         fontFamily: FontFamily.montserrat,
                       ),
                     ),
@@ -107,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                                              fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w400,
                         fontFamily: FontFamily.montserrat,
                       ),
                     ),
@@ -130,7 +130,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomElevated(
                       text: 'Sign Up',
                       fontFamily: FontFamily.montserrat,
-                      press: () {},
+                      press: () {
+                        context.go(Routes.homeScreen.path);
+                      },
                       btnColor: AppColors.current.signUpButtonColor,
                       borderRadius: 30,
                       hSize: 45,
