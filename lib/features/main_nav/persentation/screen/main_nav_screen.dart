@@ -1,3 +1,4 @@
+import 'package:doos/features/home/persentation/cubit/home_cubit.dart';
 import 'package:doos/features/main_nav/persentation/cubit/main_nav_cubit.dart';
 import 'package:doos/features/main_nav/persentation/widgets/nav_icon_widget.dart';
 import 'package:doos/resource/generated/assets.gen.dart';

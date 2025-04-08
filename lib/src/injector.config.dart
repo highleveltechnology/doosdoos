@@ -10,6 +10,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:dio/dio.dart' as _i361;
+import 'package:doos/features/home/persentation/cubit/home_cubit.dart' as _i317;
 import 'package:doos/features/main_nav/persentation/cubit/main_nav_cubit.dart'
     as _i287;
 import 'package:doos/src/app/bloc/app_bloc.dart' as _i959;
@@ -20,6 +21,7 @@ import 'package:doos/src/core/network/auth_interceptor.dart' as _i34;
 import 'package:doos/src/core/network/network_interceptor.dart' as _i556;
 import 'package:doos/src/core/preferences/PreferencesHelper.dart' as _i406;
 import 'package:doos/src/core/preferences/Prefs.dart' as _i610;
+import 'package:doos/src/core/services/location_service.dart' as _i584;
 import 'package:doos/src/di/AppModule.dart' as _i83;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -37,6 +39,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i138.FirebaseNotificationUserClass>(
       () => _i138.FirebaseNotificationUserClass(),
     );
+    gh.factory<_i584.LocationService>(() => _i584.LocationService());
     await gh.factoryAsync<_i460.SharedPreferences>(
       () => appModule.prefs,
       preResolve: true,
@@ -47,6 +50,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<String>(
       () => appModule.currentPlatform,
       instanceName: 'currentPlatform',
+    );
+    gh.factory<_i317.HomeCubit>(
+      () => _i317.HomeCubit(gh<_i584.LocationService>()),
     );
     gh.factory<_i610.Prefs>(() => _i610.Prefs(gh<_i406.PreferencesHelper>()));
     gh.factory<_i959.AppBloc>(

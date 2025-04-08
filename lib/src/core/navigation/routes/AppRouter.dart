@@ -6,6 +6,7 @@ import 'package:doos/features/auth/persentation/sign_in/screen/sign_in_screen.da
 import 'package:doos/features/auth/persentation/sign_up/screens/sign_up_screen.dart';
 import 'package:doos/features/get_start/screen/get_start_screen_one.dart';
 import 'package:doos/features/get_start/screen/get_start_screen_two.dart';
+import 'package:doos/features/home/persentation/cubit/home_cubit.dart';
 import 'package:doos/features/home/persentation/screen/home_screen.dart';
 import 'package:doos/features/main_nav/persentation/cubit/main_nav_cubit.dart';
 import 'package:doos/features/main_nav/persentation/screen/main_nav_screen.dart';
@@ -95,7 +96,10 @@ class AppRoutes {
             path: Routes.homeScreen.path,
             name: Routes.homeScreen.name,
             builder: (context, state) {
-              return const HomeScreen();
+              return BlocProvider(
+                create: (context) => getIt<HomeCubit>()..getCurrentLocation(),
+                child: const HomeScreen(),
+              );
             },
           ),
         ],

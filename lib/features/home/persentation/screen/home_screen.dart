@@ -1,4 +1,6 @@
+import 'package:doos/features/home/persentation/widgets/appBarWidgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,17 +8,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Screen'),
-      ),
-      body: Center(
-        child: const Text('Welcome to the Home Screen!'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Action when the button is pressed
-        },
-        child: const Icon(Icons.add),
+      body: Scaffold(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 50.h),
+            AppBarWidgets()
+          ],
+        ),
+       
       ),
     );
   }

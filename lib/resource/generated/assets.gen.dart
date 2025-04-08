@@ -48,6 +48,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/in_box.svg
   SvgGenImage get inBox => const SvgGenImage('assets/images/in_box.svg');
 
+  /// File path: assets/images/notification.svg
+  SvgGenImage get notification => const SvgGenImage('assets/images/notification.svg');
+
+  /// File path: assets/images/pin-location.svg
+  SvgGenImage get pinLocation => const SvgGenImage('assets/images/pin-location.svg');
+
   /// File path: assets/images/rental.svg
   SvgGenImage get rental => const SvgGenImage('assets/images/rental.svg');
 
@@ -70,6 +76,8 @@ class $AssetsImagesGen {
     googleLogo,
     home,
     inBox,
+    notification,
+    pinLocation,
     rental,
     starPng,
     starSvg,
