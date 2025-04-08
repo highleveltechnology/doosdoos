@@ -6,7 +6,9 @@ enum Routes {
   signInScreen(path: "/SignInScreen", name: "SignInScreen"),
   forgetPassword(path: "/forgetPassword", name: "/ForgetPassword"),
   OtpScreen(path: "/OtpScreen", name: "OtpScreen"),
-  createNewPassword(path: "/CreateNewPassword", name: "/CreateNewPassword");
+  createNewPassword(path: "/CreateNewPassword", name: "/CreateNewPassword"),
+  mainNavScreen(path: "/MainNavScreen", name: "/MainNavScreen"),
+  homeScreen(path: "/HomeScreen", name: "/HomeScreen");
 
   final String path;
   final String name;

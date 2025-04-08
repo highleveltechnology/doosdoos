@@ -15,11 +15,17 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/account.svg
+  SvgGenImage get account => const SvgGenImage('assets/images/account.svg');
+
   /// File path: assets/images/checked.png
   AssetGenImage get checkedPng => const AssetGenImage('assets/images/checked.png');
 
   /// File path: assets/images/checked.svg
   SvgGenImage get checkedSvg => const SvgGenImage('assets/images/checked.svg');
+
+  /// File path: assets/images/checked1.svg
+  SvgGenImage get checked1 => const SvgGenImage('assets/images/checked1.svg');
 
   /// File path: assets/images/doos_logo.png
   AssetGenImage get doosLogo => const AssetGenImage('assets/images/doos_logo.png');
@@ -27,11 +33,23 @@ class $AssetsImagesGen {
   /// File path: assets/images/facebook-logo.png
   AssetGenImage get facebookLogo => const AssetGenImage('assets/images/facebook-logo.png');
 
+  /// File path: assets/images/favoirt.svg
+  SvgGenImage get favoirt => const SvgGenImage('assets/images/favoirt.svg');
+
   /// File path: assets/images/get_start.png
   AssetGenImage get getStart => const AssetGenImage('assets/images/get_start.png');
 
   /// File path: assets/images/google-logo.png
   AssetGenImage get googleLogo => const AssetGenImage('assets/images/google-logo.png');
+
+  /// File path: assets/images/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/images/home.svg');
+
+  /// File path: assets/images/in_box.svg
+  SvgGenImage get inBox => const SvgGenImage('assets/images/in_box.svg');
+
+  /// File path: assets/images/rental.svg
+  SvgGenImage get rental => const SvgGenImage('assets/images/rental.svg');
 
   /// File path: assets/images/star.png
   AssetGenImage get starPng => const AssetGenImage('assets/images/star.png');
@@ -40,7 +58,22 @@ class $AssetsImagesGen {
   SvgGenImage get starSvg => const SvgGenImage('assets/images/star.svg');
 
   /// List of all assets
-  List<dynamic> get values => [checkedPng, checkedSvg, doosLogo, facebookLogo, getStart, googleLogo, starPng, starSvg];
+  List<dynamic> get values => [
+    account,
+    checkedPng,
+    checkedSvg,
+    checked1,
+    doosLogo,
+    facebookLogo,
+    favoirt,
+    getStart,
+    googleLogo,
+    home,
+    inBox,
+    rental,
+    starPng,
+    starSvg,
+  ];
 }
 
 class Assets {
