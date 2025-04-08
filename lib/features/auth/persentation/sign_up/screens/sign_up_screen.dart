@@ -50,7 +50,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -68,7 +69,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                                               fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -86,7 +88,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -104,7 +107,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -125,6 +129,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     //!SingUp Button
                     CustomElevated(
                       text: 'Sign Up',
+                      fontFamily: FontFamily.montserrat,
                       press: () {},
                       btnColor: AppColors.current.signUpButtonColor,
                       borderRadius: 30,
@@ -132,7 +137,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       wSize: 315,
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
-                      textColor: AppColors.current.dialogTextColor,
+                      textColor: AppColors.current.primaryTextColor,
                     ),
                     SizedBox(height: 5.h),
                     InkWell(

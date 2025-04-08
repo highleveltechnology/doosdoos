@@ -29,6 +29,7 @@ class AppColors {
     required this.dialogTextColor,
     required this.ayeColor,
     required this.signUpButtonColor,
+    required this.orLineColor,
   });
 
   static late AppColors current;
@@ -62,11 +63,13 @@ class AppColors {
   final Color dialogTextColor;
   final Color ayeColor;
   final Color signUpButtonColor;
+  final Color orLineColor;
 
   /// gradient
   final LinearGradient primaryGradient;
 
   static const firstAppColor = AppColors(
+    orLineColor: Color(0xff878787),
     signUpButtonColor: Color(0xffF2F2F2),
     ayeColor: Color(0xff00875A),
     dialogTextColor: Color(0xffB9B9B9),
@@ -98,6 +101,7 @@ class AppColors {
   );
 
   static const secondAppColor = AppColors(
+    orLineColor: Color(0xff878787),
     signUpButtonColor: Color(0xffF2F2F2),
     ayeColor: Color(0xff00875A),
     dialogTextColor: Color(0xffB9B9B9),
@@ -130,6 +134,7 @@ class AppColors {
   );
 
   static const darkThemeColor = AppColors(
+    orLineColor: Color(0xff878787),
     signUpButtonColor: Color(0xffF2F2F2),
     ayeColor: Color(0xff00875A),
     dialogTextColor: Color(0xffB9B9B9),
@@ -182,6 +187,7 @@ class AppColors {
     Color? onBoardingText,
   }) {
     return AppColors(
+      orLineColor: orLineColor, 
       signUpButtonColor: signUpButtonColor,
       ayeColor: ayeColor,
       dialogTextColor: Color(0xffB9B9B9),

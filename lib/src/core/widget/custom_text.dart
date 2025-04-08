@@ -47,6 +47,7 @@ class CustomText extends StatelessWidget {
             fontSize: fontSize,
             fontWeight: fontWeight,
             decoration: textDecoration,
+            fontFamily: fontFamily,
           ) ??
           Theme.of(context).textTheme.bodySmall!.copyWith(
                 height: height,
@@ -54,6 +55,7 @@ class CustomText extends StatelessWidget {
                 fontSize: fontSize,
                 fontWeight: fontWeight,
                 decoration: textDecoration,
+                fontFamily: fontFamily,
               ),
     );
   }

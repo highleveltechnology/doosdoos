@@ -1,3 +1,4 @@
+import 'package:doos/resource/generated/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,7 @@ class CustomElevated extends StatelessWidget {
   final double hSize, wSize, fontSize, borderRadius;
   final VoidCallback press;
   final FontWeight fontWeight;
-
+  final String  fontFamily;
   const CustomElevated({
     super.key,
     required this.text,
@@ -21,6 +22,7 @@ class CustomElevated extends StatelessWidget {
     this.fontSize = 20,
     this.borderRadius = 12,
     this.fontWeight = FontWeight.w500,
+    this.fontFamily = FontFamily.montserrat,
   });
 
   @override
@@ -37,7 +39,7 @@ class CustomElevated extends StatelessWidget {
       child: FittedBox(
         fit: BoxFit.scaleDown,
         child: CustomText(
-          fontFamily: "Cairo",
+          fontFamily: fontFamily,
           text: text,
           color: textColor,
           fontSize: fontSize.sp,
