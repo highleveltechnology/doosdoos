@@ -1,5 +1,6 @@
 import 'package:doos/features/auth/persentation/widgets/app_bar_widget.dart';
 import 'package:doos/features/auth/persentation/widgets/container_of_textform.dart';
+import 'package:doos/resource/generated/fonts.gen.dart';
 import 'package:doos/resource/styles/app_colors.dart';
 import 'package:doos/resource/styles/app_text_styles.dart';
 import 'package:doos/src/core/navigation/routes/routes_enum.dart';
@@ -48,7 +49,12 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       maxLines: 2,
                       text:
                           "Your new password must be diffrent from your\n old password",
-                      textStyle: AppTextStyles.s13Black(),
+                      textStyle: AppTextStyles.s13Black().copyWith(
+                        color: AppColors.current.primaryTextColor,
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
+                      ),
                     ),
                     SizedBox(height: 20),
                     //!New Password
@@ -56,7 +62,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       text: "New Password",
                       textStyle: TextStyle(
                         color: AppColors.current.primaryTextColor,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -75,8 +81,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                           "Password must have at least 6-12 character,a\n number and special character",
                       textStyle: AppTextStyles.s14Error().copyWith(
                         color: AppColors.current.dialogTextColor,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 14.sp,
+                        fontFamily: FontFamily.montserrat,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     //!Confirm Password
@@ -104,8 +111,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                           "Password must have at least 6-12 character,a\n number and special character",
                       textStyle: AppTextStyles.s14Error().copyWith(
                         color: AppColors.current.dialogTextColor,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 14.sp,
+                        fontFamily: FontFamily.montserrat,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     SizedBox(height: 40.h),
@@ -116,7 +124,8 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       borderRadius: 30,
                       hSize: 45,
                       wSize: 315,
-                      fontSize: 16,
+                      fontSize: 16.sp,
+                      fontFamily: FontFamily.montserrat,
                       fontWeight: FontWeight.w500,
                       textColor: AppColors.current.primaryTextColor,
                     ),

@@ -78,10 +78,10 @@ class GetStartScreenTwo extends StatelessWidget {
                   color: AppColors.current.primaryTextColor,
                   fontSize: 28.sp,
                   fontWeight: FontWeight.w700,
-                  fontFamily: FontFamily.montserrat,
+                  fontFamily: FontFamily.cormorant,
                 ),
               ),
-              SizedBox(height: 18.h),
+             // SizedBox(height: 18.h),
               ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -94,19 +94,23 @@ class GetStartScreenTwo extends StatelessWidget {
                 itemCount: howWidget.length,
               ),
               SizedBox(height: 40.h),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: CustomText(
-                  text: 'Why Choose Doos Doos?',
-                  textStyle: TextStyle(
-                    color: AppColors.current.primaryTextColor,
-                    fontSize: 28.sp,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: FontFamily.montserrat,
+              Padding(
+                padding: const EdgeInsets.only(right: 69, left: 16),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: CustomText(
+                    text: 'Why Choose Doos Doos?',
+                    textStyle: TextStyle(
+                      letterSpacing: -0.3,
+                      color: AppColors.current.primaryTextColor,
+                      fontSize: 28.sp,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: FontFamily.cormorant,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: 18.h),
+              //SizedBox(height: 24.h),
               ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -118,20 +122,23 @@ class GetStartScreenTwo extends StatelessWidget {
                 },
                 itemCount: whyChoose.length,
               ),
-              SizedBox(height: 18.h),
-              Center(
-                child: CustomElevated(
-                  text: 'Get Started',
-                  press: () { 
-                    context.push(Routes.signUpScreen.path);
-                  },
-                  btnColor: AppColors.current.primaryTextColor,
-                  textColor: AppColors.current.witheColor,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w500,
-                  wSize: 315,
-                  hSize: 45,
-                  borderRadius: 90,
+              SizedBox(height: 48.h),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal:30 ),
+                child: Center(
+                  child: CustomElevated(
+                    text: 'Get Started',
+                    press: () { 
+                      context.push(Routes.signUpScreen.path);
+                    },
+                    btnColor: AppColors.current.primaryTextColor,
+                    textColor: AppColors.current.witheColor,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
+                    wSize: 315,
+                    hSize: 45,
+                    borderRadius: 90,
+                  ),
                 ),
               ),
             ],

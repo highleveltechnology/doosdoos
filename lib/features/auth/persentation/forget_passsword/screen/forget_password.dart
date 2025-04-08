@@ -1,5 +1,6 @@
 import 'package:doos/features/auth/persentation/widgets/app_bar_widget.dart';
 import 'package:doos/features/auth/persentation/widgets/container_of_textform.dart';
+import 'package:doos/resource/generated/fonts.gen.dart';
 import 'package:doos/resource/styles/app_colors.dart';
 import 'package:doos/src/core/navigation/routes/routes_enum.dart';
 import 'package:doos/src/core/widget/custom_elevated.dart';
@@ -34,14 +35,21 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               },
             ),
           ),
-          CustomText(
-            maxLines: 2,
-            text:
-                "Please enter email address or phone number\n to reset your password ",
-            textStyle: TextStyle(
-              color: AppColors.current.dialogTextColor,
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
+          Padding(
+            padding: const EdgeInsets.only(top: 24,right: 20, left: 40),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: CustomText(
+                maxLines: 2,
+                text:
+                    "Please enter email address or phone number\n to reset your password ",
+                textStyle: TextStyle(
+                  color: AppColors.current.primaryTextColor,
+                  fontSize: 13.sp,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: FontFamily.montserrat,
+                ),
+              ),
             ),
           ),
           SizedBox(height: 40.h),
@@ -54,9 +62,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   CustomText(
                     text: "Email/phone number",
                     textStyle: TextStyle(
-                      color: AppColors.current.dialogTextColor,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
+                      color: AppColors.current.primaryTextColor,
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: FontFamily.montserrat
                     ),
                   ),
                   SizedBox(height: 5.h),

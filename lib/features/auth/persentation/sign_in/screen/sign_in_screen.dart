@@ -50,9 +50,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     CustomText(
                       text: "Email",
                       textStyle: TextStyle(
-                        color: AppColors.current.dialogTextColor,
+                        color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.montserrat,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -68,9 +69,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     CustomText(
                       text: "Password",
                       textStyle: TextStyle(
-                        color: AppColors.current.dialogTextColor,
+                        color: AppColors.current.primaryTextColor,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontFamily: FontFamily.montserrat,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     SizedBox(height: 5),
@@ -96,9 +98,10 @@ class _SignInScreenState extends State<SignInScreen> {
                         child: CustomText(
                           text: 'Forget Password?',
                           textStyle: TextStyle(
-                            color: AppColors.current.dialogTextColor,
+                            fontFamily: FontFamily.montserrat,
+                            color: AppColors.current.primaryTextColor,
                             fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ),
@@ -107,6 +110,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     //!SingUp Button
                     CustomElevated(
                       text: 'Sign In',
+                      fontFamily: FontFamily.montserrat,
                       press: () {},
                       btnColor: AppColors.current.signUpButtonColor,
                       borderRadius: 30,
@@ -117,24 +121,28 @@ class _SignInScreenState extends State<SignInScreen> {
                       textColor: AppColors.current.primaryTextColor,
                     ),
                     SizedBox(height: 5.h),
-                    OrLineWidget(),
+                    Center(child: OrLineWidget()),
                     SizedBox(height: 10.h),
-                    SocialSigInButton(
-                      icon: Assets.images.googleLogo.image(
-                        width: 24.w,
-                        height: 24,
+                    Center(
+                      child: SocialSigInButton(
+                        icon: Assets.images.googleLogo.image(
+                          width: 24.w,
+                          height: 24.h,
+                        ),
+                        text: 'Login with google',
                       ),
-                      text: 'Login with google',
                     ),
-                    SizedBox(height: 10.h),
-                    SocialSigInButton(
-                      icon: Assets.images.facebookLogo.image(
-                        width: 24.w,
-                        height: 24,
+                    SizedBox(height: 16.h),
+                    Center(
+                      child: SocialSigInButton(
+                        icon: Assets.images.facebookLogo.image(
+                          width: 24.w,
+                          height: 24.h,
+                        ),
+                        text: 'Login with Facebook',
                       ),
-                      text: 'Login with Facebook',
                     ),
-                    SizedBox(height: 10.h),
+                    SizedBox(height: 16.h),
                     Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -142,7 +150,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           CustomText(
                             text: 'Don’t have an account?',
                             textStyle: TextStyle(
-                              color: AppColors.current.dialogTextColor,
+                              color: AppColors.current.primaryTextColor,
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
                               fontFamily: FontFamily.montserrat,

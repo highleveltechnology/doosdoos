@@ -7,6 +7,7 @@ import 'package:doos/src/core/local/responsive_text.dart';
 import 'package:doos/src/core/widget/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class RowItem extends StatelessWidget {
   const RowItem({super.key, required this.getStart});
@@ -19,7 +20,7 @@ class RowItem extends StatelessWidget {
       children: [
         //!Icon
         getStart.type == "how"
-            ? Assets.images.checkedPng.image(width: 50.w, height: 50.h)
+            ? Assets.images.checkedPng.image(width: 50.w, height: 50.h,)
             : Assets.images.starPng.image(width: 50.w, height: 50.h),
         SizedBox(width: 10.w),
         //! Column for title and description
